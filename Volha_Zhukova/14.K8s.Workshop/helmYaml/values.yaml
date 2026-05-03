@@ -1,0 +1,21 @@
+global:
+  domain: "k8s-11.sa"
+
+jenkins:
+  image: "jfrog.it-academy.by/public/jenkins-ci:spishchyk_33"
+  adminPassword: "Secret"
+  resources:
+    requests:
+      cpu: 2
+      memory: "2Gi"
+    limits:
+      cpu: 3
+      memory: "3Gi"
+  nfs:
+    server: "192.168.37.105"
+    path: "/mnt/IT-Academy/nfs-data/sa2-34-26/zhukova/jenkins"
+  casc:
+    adminEmail: "commander.one.hand@gmail.com"
+    numExecutors: 2
+  service:
+    port: 8080
